@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:autofillHints=""
+        android:background="@null"
+
+        android:scrollbars="none"
+
+        android:cursorVisible="true"
+        android:inputType="text"
+        android:textCursorDrawable="@color/colorAccent"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutPAD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="@color/green"
+
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutPAD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPAD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="0dp"
+                android:layout_marginStart="37dp"
+                android:layout_gravity="center_vertical"
+                app:cardBackgroundColor="@android:color/transparent"
+                >
+
+                <ImageButton
+                    android:id="@+id/trickButton1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/clock"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/todo"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center_vertical"
+                app:cardBackgroundColor="@android:color/transparent"
+                >
+
+                <ImageButton
+                    android:id="@+id/trickButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    android:src="@drawable/btn_unitconverter"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/todo"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center_vertical"
+                app:cardBackgroundColor="@android:color/transparent"
+                >
+
+                <ImageButton
+                    android:id="@+id/trickButton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    android:src="@drawable/btn_scientific"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="@string/todo"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="0dp"
+                    android:layout_marginEnd="37dp"
+                    android:layout_gravity="center_vertical"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/imageButtonBack"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_baseline_backspace_24"
+                        android:background="?attr/selectableItemBackground"
+                        android:contentDescription="@string/todo"
+                        />
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30sp"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="?android:attr/listDivider" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginHorizontal="@dimen/cardMarginHor"
+                    android:layout_marginVertical="@dimen/cardMarginVer"
+                    app:cardBackgroundColor="@color/app_theme_color_2"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation">
+
+                    <LinearLayout
+                        android:id="@+id/_c"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:id="@+id/_c_T"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/c"
+                            android:textColor="@color/red"
+                            android:textSize="33sp" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginHorizontal="@dimen/cardMarginHor"
+                    android:layout_marginVertical="@dimen/cardMarginVer"
+                    app:cardBackgroundColor="@color/app_theme_color_2"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation">
+
+                    <LinearLayout
+                        android:id="@+id/_br"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:id="@+id/_br_T"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_br"
+                            android:textColor="@color/green"
+                            android:textSize="30sp" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginHorizontal="@dimen/cardMarginHor"
+                    android:layout_marginVertical="@dimen/cardMarginVer"
+                    app:cardBackgroundColor="@color/app_theme_color_2"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation">
+
+                    <LinearLayout
+                        android:id="@+id/_per"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:id="@+id/_per_T"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/_per"
+                            android:textColor="@color/green"
+                            android:textSize="34sp" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginHorizontal="@dimen/cardMarginHor"
+                    android:layout_marginVertical="@dimen/cardMarginVer"
+                    app:cardBackgroundColor="@color/app_theme_color_2"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation">
+
+                    <LinearLayout
+                        android:id="@+id/_dev"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:id="@+id/_dev_T"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/_dev"
+                            android:textColor="@color/green"
+                            android:textSize="50sp" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginHorizontal="@dimen/cardMarginHor"
+                    android:layout_marginVertical="@dimen/cardMarginVer"
+                    app:cardBackgroundColor="@color/app_theme_color_2"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation">
+
+                    <LinearLayout
+                        android:id="@+id/_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:id="@+id/_7_T"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/_7"
+                            android:textSize="@dimen/textViewSize" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginHorizontal="@dimen/cardMarginHor"
+                    android:layout_marginVertical="@dimen/cardMarginVer"
+                    app:cardBackgroundColor="@color/app_theme_color_2"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation">
+
+                    <LinearLayout
+                        android:id="@+id/_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:id="@+id/_8_T"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/_8"
+                            android:textSize="@dimen/textViewSize" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginHorizontal="@dimen/cardMarginHor"
+                    android:layout_marginVertical="@dimen/cardMarginVer"
+                    app:cardBackgroundColor="@color/app_theme_color_2"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation">
+
+                    <LinearLayout
+                        android:id="@+id/_9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:id="@+id/_9_T"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/_9"
+                            android:textSize="@dimen/textViewSize" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginHorizontal="@dimen/cardMarginHor"
+                    android:layout_marginVertical="@dimen/cardMarginVer"
+                    app:cardBackgroundColor="@color/app_theme_color_2"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation">
+
+                    <LinearLayout
+                        android:id="@+id/_mul"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground">
+
+                        <ImageView
+                            android:id="@+id/_mul_T"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="22dp"
+                            android:src="@drawable/ic_baseline_close_24"
+                            android:textColor="@color/green"
+                            android:contentDescription="@string/todo"
+                            />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginHorizontal="@dimen/cardMarginHor"
+                    android:layout_marginVertical="@dimen/cardMarginVer"
+                    app:cardBackgroundColor="@color/app_theme_color_2"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation">
+
+                    <LinearLayout
+                        android:id="@+id/_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:id="@+id/_4_T"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/_4"
+                            android:textSize="@dimen/textViewSize" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginHorizontal="@dimen/cardMarginHor"
+                    android:layout_marginVertical="@dimen/cardMarginVer"
+                    app:cardBackgroundColor="@color/app_theme_color_2"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation">
+
+                    <LinearLayout
+                        android:id="@+id/_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:id="@+id/_5_T"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/_5"
+                            android:textSize="@dimen/textViewSize" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginHorizontal="@dimen/cardMarginHor"
+                    android:layout_marginVertical="@dimen/cardMarginVer"
+                    app:cardBackgroundColor="@color/app_theme_color_2"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation">
+
+                    <LinearLayout
+                        android:id="@+id/_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:id="@+id/_6_T"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/_6"
+                            android:textSize="@dimen/textViewSize" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginHorizontal="@dimen/cardMarginHor"
+                    android:layout_marginVertical="@dimen/cardMarginVer"
+                    app:cardBackgroundColor="@color/app_theme_color_2"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation">
+
+                    <LinearLayout
+                        android:id="@+id/_minus"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground">
+
+                        <ImageView
+                            android:id="@+id/_minus_T"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="20dp"
+                            android:src="@drawable/ic_baseline_remove_24"
+                            android:textColor="@color/green"
+                            android:contentDescription="@string/todo"
+                            />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginHorizontal="@dimen/cardMarginHor"
+                    android:layout_marginVertical="@dimen/cardMarginVer"
+                    app:cardBackgroundColor="@color/app_theme_color_2"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation">
+
+                    <LinearLayout
+                        android:id="@+id/_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:id="@+id/_1_T"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/_1"
+                            android:textSize="@dimen/textViewSize" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginHorizontal="@dimen/cardMarginHor"
+                    android:layout_marginVertical="@dimen/cardMarginVer"
+                    app:cardBackgroundColor="@color/app_theme_color_2"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation">
+
+                    <LinearLayout
+                        android:id="@+id/_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:id="@+id/_2_T"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/_2"
+                            android:textSize="@dimen/textViewSize" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginHorizontal="@dimen/cardMarginHor"
+                    android:layout_marginVertical="@dimen/cardMarginVer"
+                    app:cardBackgroundColor="@color/app_theme_color_2"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation">
+
+                    <LinearLayout
+                        android:id="@+id/_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:id="@+id/_3_T"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/_3"
+                            android:textSize="@dimen/textViewSize" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginHorizontal="@dimen/cardMarginHor"
+                    android:layout_marginVertical="@dimen/cardMarginVer"
+                    app:cardBackgroundColor="@color/app_theme_color_2"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation">
+
+                    <LinearLayout
+                        android:id="@+id/_plus"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:id="@+id/_plus_T"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/_plus"
+                            android:gravity="center"
+                            android:textColor="@color/green"
+                            android:textSize="50sp" />
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginHorizontal="@dimen/cardMarginHor"
+                    android:layout_marginVertical="@dimen/cardMarginVer"
+                    app:cardBackgroundColor="@color/app_theme_color_2"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation">
+
+                    <LinearLayout
+                        android:id="@+id/_plus_min"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:id="@+id/_plus_min_T"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/_plus_min"
+                            android:textSize="@dimen/textViewSize" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginHorizontal="@dimen/cardMarginHor"
+                    android:layout_marginVertical="@dimen/cardMarginVer"
+                    app:cardBackgroundColor="@color/app_theme_color_2"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation">
+
+                    <LinearLayout
+                        android:id="@+id/_0"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:id="@+id/_0_T"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/_0"
+                            android:textSize="@dimen/textViewSize" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginHorizontal="@dimen/cardMarginHor"
+                    android:layout_marginVertical="@dimen/cardMarginVer"
+                    app:cardBackgroundColor="@color/app_theme_color_2"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation">
+
+                    <LinearLayout
+                        android:id="@+id/_dot"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:id="@+id/_dot_T"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/_dot"
+                            android:textSize="@dimen/textViewSize" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/cardWidth"
+                    android:layout_height="@dimen/cardHeight"
+                    android:layout_marginHorizontal="@dimen/cardMarginHor"
+                    android:layout_marginVertical="@dimen/cardMarginVer"
+                    app:cardBackgroundColor="@color/green"
+                    app:cardCornerRadius="@dimen/cardCornerRadius"
+                    app:cardElevation="@dimen/cardElevation">
+
+                    <LinearLayout
+                        android:id="@+id/_equal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:id="@+id/_equal_T"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:text="@string/_equal"
+                            android:textSize="55sp" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
